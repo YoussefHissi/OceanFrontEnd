@@ -1,0 +1,117 @@
+
+
+
+
+
+
+<section class="oc__header">
+    
+ <div class="oc__logo-box">
+    <img class="oc__logo"  src="https://www.oceaneconsulting.com/wp-content/themes/oceaneconsulting/assets/images/logo-oceane-consulting-bleu-blanc.svg" alt="">
+ </div>
+
+</section>
+
+<section class="oc__postule-section" *ngIf="!submitClicked">
+    
+    <h2 class="oc__form-title">
+      Postuler mantenant !
+    </h2>
+    
+    <form class="oc__form" [formGroup]="postuler" >
+        <div class="oc__form-content">
+        <div class="oc__input-box">
+          <label class="Nom__label">Nom *</label>
+          <input placeholder="Nom" type="text" formControlName="nom" [class.error]="nom.invalid && (nom.dirty || nom.touched)">
+          <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="error-message">
+            Nom is required.
+          </div>
+        </div>
+
+        
+        
+        <div class="oc__input-box">
+          <label class="Prenom__label">Prenom *</label>
+          <input placeholder="Prenom" formControlName="prenom" [class.error]="prenom.invalid && (prenom.dirty || prenom.touched)">
+          <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="error-message">
+            Prenom is required.
+          </div>
+        </div>
+        
+        <div class="oc__input-box">
+          <label class="Email__label">Email *</label>
+          <input placeholder="Email" type="email" formControlName="email" [class.error]="email.invalid && (email.dirty || email.touched)">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+            Please enter a valid email address.
+          </div>
+        </div>
+        
+        <div class="oc__input-box">
+          <label class="Telephone__label">Telephone *</label>
+          <input placeholder="ex: 0658585858" type="text" formControlName="telephone" [class.error]="telephone.invalid && (telephone.dirty || telephone.touched)">
+          <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="error-message">
+            Telephone is required.
+          </div>
+        </div>
+        
+        <div class="oc__input-box">
+          <label class="NineauEtu__label">Nineau d'études *</label>
+          <input placeholder="ex: Licence" type="text" formControlName="Niveau_etude" [class.error]="Niveau_etude.invalid && (Niveau_etude.dirty || Niveau_etude.touched)">
+          <div *ngIf="Niveau_etude.invalid && (Niveau_etude.dirty || Niveau_etude.touched)" class="error-message">
+            Nineau d'études is required.
+          </div>
+        </div>
+        
+        <div class="oc__input-box">
+          <label class="AnneeExper__label">Nombre d’années d’expérience *</label>
+          <input placeholder="ex: 3 années" type="text" formControlName="annees_experience" [class.error]="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)">
+          <div *ngIf="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)" class="error-message">
+            Nombre d’années d’expérience is required.
+          </div>
+        </div>
+       
+        <div class="oc__input-box">
+          <label class="DernierEmployeur__label">Dernier employeur *</label>
+          <input type="text" formControlName="Dernier_employeur" [class.error]="Dernier_employeur.invalid && (Dernier_employeur.dirty || Dernier_employeur.touched)">
+          <div *ngIf="Dernier_employeur.invalid && (Dernier_employeur.dirty || Dernier_employeur.touched)" class="error-message">
+            Dernier employeur is required.
+          </div>
+        </div>
+         
+        <div class="oc__input-box">
+          <label class="CV__label">Votre CV *</label>
+          <input formControlName="cv" class="oc__cv-input" type="file" [class.error]="cv.invalid && (cv.dirty || cv.touched)">
+          <div *ngIf="cv.invalid && (cv.dirty || cv.touched)" class="error-message">
+            Please upload your CV.
+          </div>
+        </div> 
+        
+        <div class="oc__submit--button-box">
+            <button type="button" class="oc__submit--button" (click)="AddCandidature()" [disabled]="postuler.invalid">
+              Postuler
+            </button>
+          </div>
+
+        </div>
+      </form>
+   
+   </section>
+
+   <section class="oc__message-section"  *ngIf="submitClicked">
+    <h2 class="Candidature_envoyee--h2">Candidature envoyée !</h2>
+    <div id="animation"><iframe [frameBorder]="0" src="https://embed.lottiefiles.com/animation/79569"></iframe></div>
+   </section>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+<script src="../../../assets/animation.js"></script>
+
+
+
+
+
+
+

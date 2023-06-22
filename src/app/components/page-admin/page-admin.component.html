@@ -1,0 +1,63 @@
+
+  <section class="oc__header">
+    <div class="oc__logo-box">
+      <img class="oc__logo" src="https://www.oceaneconsulting.com/wp-content/themes/oceaneconsulting/assets/images/logo-oceane-consulting-bleu-blanc.svg" alt="">
+    </div>
+  </section>
+  <h2 class="oc__form-title">
+    Gérer les Candidatures !
+  </h2>
+  <div class="oc__logout-box">
+    <a  class="oc__logout" (click)="logout()">logout</a>
+  </div>
+  <section class="oc__postule-section ">
+   
+
+
+    <table type="table" class="table ">
+      <thead class="thead-tableau ">
+        <tr class="overflow-scroll">
+          <th scope="col">Id</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Email</th>
+          <th scope="col">Téléphone</th>
+          <th scope="col">Année d'expérience</th>
+          <th scope="col">Niveau D'étude</th>
+          <th scope="col">Dernier employeur</th>
+          <th scope="col">CV</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of candidats | paginate: { itemsPerPage: pageSize, currentPage: currentPage } ; index as i">
+          <td>{{ item.id }}</td>
+          <td>{{ item.nom }}</td>
+          <td>{{ item.prenom }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.telephone }}</td>
+          <td>{{ item.annees_experience }}</td>
+          <td>{{ item.niveau_etude }}</td>
+          <td>{{ item.dernier_employeur }}</td>
+            <td><a  class="pdf--a" (click)="showpdf(item.cv)"  ><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAhFBMVEXLBgb////7jY3JAADgjY39kJDOHR34h4foZWX77e3NJibhk5PGAAD99vbnqKj7h4f7goLRQ0P9w8P9ycn119fst7fwycnfgoLwxMTRPz/knp7yz8/LDQ3ddHT34+PMISHWVlbZZ2fTTEzudHTkXFz8vLzbRETUMjLhU1Pvp6fWXFzQNTUNfI+KAAADa0lEQVRoge3bbXebIBQAYM3N0pmATTbfYjSprlu25v//vwlodAZRCdd+GJx+4FDCo3BBPYrjStJpXWbOzASbl9Xq9busuaHkPBYFJQDMpYW9ev32lB3qyI09C3+wIy35bs/B+zbN9Oi7vdpPHvO+HWvSrT0d79ne5nl7tZ/Y7T070qW79tQx79mpEXsi3rPXZuxpOJI9KeCw7Ck4mj0h2vHs8TFHtEdxTHsMR7VHAg7XVuPItjLasW3VmKPbChzfHr6BXMAeDLgl7CF8EXtgzJex5bg5O9srbCluzHbgxxcVLhlzg/a70pbgBu2L2n7Ezdljnf6Im7Q3I/brTzTbgV8rpY5pO3Ddf1GkF0zbAXL9/XUwvf/BtCtdkcga11Yel7WtbW1rW9va1ra2ta39n9pDb9gwbHHn380DkbWDYEOZ53kh3ukBfITnKgW5pCEMO6x+SLfsl+CEioYwbL/6oSfshnZvS9twoE1DRFYR1Y5ZGz7ApVgq1lp7x9roRL0xGx4aFQUd2x/qbl27FuByfDtsOzgvOW6A1HY1q1NuD304MN+GPEoin9wiHkfJPYDhmrASz4dU2JmfnFmVMInkr3Q1bDaIwe5epQ4jyJsCGtT2+V4nkfa7pt1J9Mhn8se/pbg2DU6i8ZBFVRbw/PkUtHYSeCwbBGffZJ+7NL1VEcRjiV6qyCt49bgKq0NY21UScW5ujgk7JzzWTzwPDuFgyst4ns2xji2jdW0xyHWAVZWAdT8VH2Ygzm9hHwSzYZVCgCsb2aSO+GVsB1ilhMCRuiLoFrQJqxQRccFa1gZ+3uGnnDccWKUdwG3J8a7jnE9wNquZ7WWLxDmf3wBbtz4OEvGD4IUQINtu+OY4BV9UA2gmOo03cNzx6xuq7VLPExl2IYOLWNs9r75Dw7WbFPIVs72EVkeFa1O/qZHUi3XbUFS49f05kn27hqzLT3nztANQhuyEk4Js0zTdsbUdiio3/Bma/vyunrHYX+cfTUl7Ezl4i/qkLXu+nPdN55Pr+VPJ2rNs95Psch3H8fZTbMlz2HK2sWRta1vb2ta2trWtbdDW31czxU6Vtv5+oil2pLS9Cx4OW09p6+8fm2DHrtrW3jc3Tmd0xNbeLzhK90fb4D7JMbl9baewNfeHjshl8AhJbL19sYqUleuTjPkLg3BGjYWRG0IAAAAASUVORK5CYII=" style="width: 15px;" alt=""></a></td>
+           
+
+            <td ><a   (click)="deleteItem(item.id)" class="delete__candidat--btn" >Delete</a></td>
+              
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      <pagination-controls class="paginatio" (pageChange)="currentPage = $event"></pagination-controls>
+
+    
+   
+   </section>
+
+
+
+
+
+
+

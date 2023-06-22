@@ -1,0 +1,218 @@
+*,
+::after,
+::before{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+html{
+    font-size: 62.5%;
+    
+}
+
+li{
+    list-style: none;
+
+}
+
+
+
+
+.oc__logo-box{
+      
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin: 75px 0px 50px 0px;
+   
+    
+    
+    
+}
+
+.oc__logo{
+    width: 100px;
+    padding: 40px 0px 0px 0px;
+}
+
+
+.oc__form-title{
+  margin-top: 10px;
+    text-align: center;
+    color: rgb(190, 190, 189);
+
+}
+
+@media (max-width:631px){
+  .oc__form-title{
+    font-size: 22px;
+      
+  }
+}
+
+.oc__form{
+    width: 600px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    padding: 50px 25px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+@media (max-width:997px){
+  .oc__form{
+    width: 100%;
+    margin: 0px auto 0px auto;
+
+}
+}
+
+
+@media (max-width:631px){
+  .oc__form{
+    width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    padding: 50px 25px;
+    margin: 50px auto 0px auto;
+    border-radius: 10px;
+}
+}
+
+
+.oc__form-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px; 
+  
+    justify-content: center;
+}
+
+@media (max-width:631px){
+  .oc__form-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+}
+}
+
+label{
+  font-size: 1.4rem;
+}
+
+
+
+.oc__input-box{
+  width: 100%;
+  height: 40px;
+  margin: 30px 0px 50px 0px;
+  flex: 0 1 40%;
+    
+
+    
+}
+
+@media (max-width:631px){
+  .oc__input-box{
+    width: 100%;
+    height: 40px;
+      margin: 10px 0px 20px 0px;
+      flex: 0 1 100%;      
+  }
+}
+
+.oc__input-box>input{
+   width: 100%;
+   height: 100%;
+   padding: 0px 15px;
+   outline: none;
+  border-radius: 5px;
+  
+  }
+  @media (max-width:631px){
+    .oc__input-box>input{
+      width: 100%;
+      height: 40px;
+      padding: 0px 15px;
+      outline: none;
+     border-radius: 5px;
+     
+     }
+  }
+
+
+  .oc__submit--button-box{
+
+    width: 100%;
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+  .CV__label{
+    display: block;
+    margin: 5px 0px 5px 0px;
+    
+   }
+
+
+
+
+  .oc__submit--button{
+text-decoration: none;
+width: 100px;
+background-color: #234f63;
+text-align: center;
+color: white;
+padding: 10px 0px;
+border-radius: 5px;
+transition: all 0.5s ease-in;
+
+  }
+
+  .oc__submit--button:hover{
+    scale: 1.05;
+      }
+
+
+      
+
+
+      .Candidature_envoyee--h2{
+        text-align: center;
+      }
+
+      #animation{
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+        
+
+
+      }
+    
+      input:not(input[type="file"]){
+color: black;
+
+      }
+
+      input::content{
+        font-size: 1.2rem;
+              }
+
+              
+  .error-message{
+    color: red;
+    padding: 3px;
+    font-size: 1.3rem;
+
+              }
+
+
+
+            
+              

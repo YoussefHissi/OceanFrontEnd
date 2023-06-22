@@ -1,0 +1,43 @@
+
+
+
+<section class="oc__header">
+    
+ <div class="oc__logo-box">
+    <img class="oc__logo"  src="https://www.oceaneconsulting.com/wp-content/themes/oceaneconsulting/assets/images/logo-oceane-consulting-bleu-blanc.svg" alt="">
+ </div>
+
+</section>
+
+<section class="oc__postule-section">
+    
+    <h2 class="oc__form-title">
+      Login
+    </h2>
+    
+    <form class="oc__form" [formGroup]="Loginform" >
+       <div class="oc__form-content">
+
+        <div class="oc__input-box">
+          <label class="User__label">Username</label>
+          <input formControlName="username" placeholder="your username" type="text"  value="">
+        </div>
+        
+        <div class="oc__input-box">
+            <label class="Password__label">Password</label>
+            <input formControlName="password" placeholder="your password" type="password"  value="">
+        </div>
+       
+    </div>
+    
+    <div class="oc__submit--button-box">
+        <a (click)="Login()" class="oc__submit--button" >Login</a>
+     </div>
+      </form>
+   
+   </section>
+
+
+
+
+
