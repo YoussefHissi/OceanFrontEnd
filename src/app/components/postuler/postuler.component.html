@@ -24,7 +24,7 @@
           <label class="Nom__label">First Name <span class="star">*</span></label>
           <input placeholder="Nom" type="text" formControlName="nom" [class.error]="nom.invalid && (nom.dirty || nom.touched)">
           <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="error-message">
-            Name is required.
+            First Name is required.
           </div>
         </div>
 
@@ -34,7 +34,7 @@
           <label class="Prenom__label">Last Name <span class="star">*</span></label>
           <input placeholder="Prenom" formControlName="prenom" [class.error]="prenom.invalid && (prenom.dirty || prenom.touched)">
           <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="error-message">
-            Prenom is required.
+            Last Name is required.
           </div>
         </div>
         
@@ -50,7 +50,7 @@
           <label class="Telephone__label">Phone Number <span class="star">*</span></label>
           <input placeholder="ex: 0658585858" type="text" formControlName="telephone" [class.error]="telephone.invalid && (telephone.dirty || telephone.touched)">
           <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="error-message">
-            Telephone is required.
+            Phone Number is required.
           </div>
         </div>
         
@@ -58,7 +58,7 @@
           <label class="NineauEtu__label">educational level <span class="star">*</span></label>
           <input placeholder="ex: Licence" type="text" formControlName="Niveau_etude" [class.error]="Niveau_etude.invalid && (Niveau_etude.dirty || Niveau_etude.touched)">
           <div *ngIf="Niveau_etude.invalid && (Niveau_etude.dirty || Niveau_etude.touched)" class="error-message">
-            Nineau d'études is required.
+            Level of education is required.
           </div>
         </div>
         
@@ -68,7 +68,7 @@
           <label class="DernierEmployeur__label">Last employer <span class="star">*</span></label>
           <input type="text" formControlName="Dernier_employeur" [class.error]="Dernier_employeur.invalid && (Dernier_employeur.dirty || Dernier_employeur.touched)">
           <div *ngIf="Dernier_employeur.invalid && (Dernier_employeur.dirty || Dernier_employeur.touched)" class="error-message">
-            Dernier employeur is required.
+            Last employer is required.
           </div>
         </div>
          
@@ -96,7 +96,7 @@
           </ul>
         
           <div *ngIf="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)" class="error-message">
-            Nombre d’années d’expérience is required.
+            number of years of experience is required.
           </div>
         </div>
         
@@ -112,7 +112,7 @@
    </section>
 
    <section class="oc__message-section"  *ngIf="submitClicked">
-    <h2 class="Candidature_envoyee--h2">Candidature envoyée !</h2>
+    <h2 class="Candidature_envoyee--h2">Application sent !</h2>
     <div id="animation"><iframe [frameBorder]="0" src="https://embed.lottiefiles.com/animation/79569"></iframe></div>
    </section>
 
