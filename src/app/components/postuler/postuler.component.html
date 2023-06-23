@@ -66,7 +66,16 @@
           <label class="AnneeExper__label">Nombre d’années d’expérience *</label>
           <input class="AnneeExper__input" readonly placeholder="Select" type="text" formControlName="annees_experience" [class.error]="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)">
           <svg  width="24" height="24" viewBox="0 0 24 24" focusable="false" class="cqEepf NMm5M icon-down"><path d="M7 10l5 5 5-5H7z"></path></svg>
-         
+          <ul class="AnneeExper__list">
+            <li class="AnneeExper__list--item">1</li>
+            <li class="AnneeExper__list--item">2</li>
+            <li class="AnneeExper__list--item">3</li>
+            <li class="AnneeExper__list--item">4</li>
+            <li class="AnneeExper__list--item">5</li>
+            <li class="AnneeExper__list--item">6</li>
+            <li class="AnneeExper__list--item">7</li>
+            <li class="AnneeExper__list--item">8</li>
+          </ul>
         
           <div *ngIf="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)" class="error-message">
             Nombre d’années d’expérience is required.
