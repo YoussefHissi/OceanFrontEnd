@@ -62,25 +62,7 @@
           </div>
         </div>
         
-        <div class="oc__input-box ">
-          <label class="AnneeExper__label">Nombre d’années d’expérience *</label>
-          <input class="AnneeExper__input" readonly placeholder="Select" type="text" formControlName="annees_experience" [class.error]="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)">
-          <svg  width="24" height="24" viewBox="0 0 24 24" focusable="false" class="cqEepf NMm5M icon-down"><path d="M7 10l5 5 5-5H7z"></path></svg>
-          <ul class="AnneeExper__list">
-            <li class="AnneeExper__list--item">1</li>
-            <li class="AnneeExper__list--item">2</li>
-            <li class="AnneeExper__list--item">3</li>
-            <li class="AnneeExper__list--item">4</li>
-            <li class="AnneeExper__list--item">5</li>
-            <li class="AnneeExper__list--item">6</li>
-            <li class="AnneeExper__list--item">7</li>
-            <li class="AnneeExper__list--item">8</li>
-          </ul>
-        
-          <div *ngIf="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)" class="error-message">
-            Nombre d’années d’expérience is required.
-          </div>
-        </div>
+    
        
         <div class="oc__input-box">
           <label class="DernierEmployeur__label">Dernier employeur *</label>
@@ -97,6 +79,27 @@
             Please upload your CV.
           </div>
         </div> 
+
+        <div class="oc__input-box ">
+          <label class="AnneeExper__label">Nombre d’années d’expérience *</label>
+          <input class="AnneeExper__input"  (click)="showlist()" readonly placeholder="{{itemvalue}}" type="text" formControlName="annees_experience" [class.error]="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)">
+          <svg  width="24" height="24" viewBox="0 0 24 24" focusable="false" class="cqEepf NMm5M icon-down"><path d="M7 10l5 5 5-5H7z"></path></svg>
+          <ul *ngIf="showedlist" class="AnneeExper__list">
+            <li class="AnneeExper__list--item"   (click)="get_item_value($event);hidelist()" value="1 year">less than 1 year</li>
+            <li class="AnneeExper__list--item"   (click)="get_item_value($event);hidelist()" value="1 year">1 year</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="2 years">2 years</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="3 years">3 years</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="4 years">4 years</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="5 years">5 years</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="6 years">6 years</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="7 years">7 years</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="8 years">+8 years</li>
+          </ul>
+        
+          <div *ngIf="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)" class="error-message">
+            Nombre d’années d’expérience is required.
+          </div>
+        </div>
         
         <div class="oc__submit--button-box">
             <button type="button" class="oc__submit--button" (click)="AddCandidature()" [disabled]="postuler.invalid">

@@ -238,11 +238,12 @@ cursor: pointer;
     cursor: pointer;
     height: 150px;
     overflow-y: scroll;
+    border-radius: 2px;
+
   
   }
   .AnneeExper__list--item{
     padding: 8px 10px;
-
     
       }
 

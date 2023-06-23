@@ -18,11 +18,38 @@ export class PostulerComponent implements OnInit {
   Dernier_employeur!:FormControl;
   cv!:FormControl;
   submitClicked:boolean=false;
+  showedlist:boolean=false;
+  itemvalue:any=""
   constructor(private service: ServiceService) {}
 
   ngOnInit() {
     this.initialiseData();
   }
+
+  showlist(){
+    this.showedlist=!this.showedlist;
+      
+    }
+
+    hidelist(){
+      this.showedlist=false;
+        
+      }
+    get_item_value(event:any){
+      this.itemvalue=event.target.value 
+      if(this.itemvalue==1){
+        this.itemvalue=this.itemvalue+' year'
+      }if(this.itemvalue==8){
+        this.itemvalue='+ '+this.itemvalue
+      }
+      
+      else{
+        this.itemvalue=this.itemvalue +' years'
+      }
+      console.log(this.itemvalue)
+    }
+    
+   
 
   initialiseData() {
     this.nom = new FormControl('', Validators.required);
@@ -30,7 +57,7 @@ export class PostulerComponent implements OnInit {
     this.email = new FormControl('', [Validators.required, Validators.email]);
     this.telephone = new FormControl('', Validators.required);
     this.Niveau_etude = new FormControl('', Validators.required);
-    this.annees_experience = new FormControl('', Validators.required);
+    this.annees_experience = new FormControl(this.itemvalue, Validators.required);
     this.Dernier_employeur = new FormControl('', Validators.required);
     this.cv=new FormControl(null, Validators.required);
     this.postuler = new FormGroup({
@@ -39,7 +66,7 @@ export class PostulerComponent implements OnInit {
       email: this.email,
       telephone: this.telephone,
       Niveau_etude: this.Niveau_etude,
-      annees_experience: this.annees_experience,
+      annees_experience: this.itemvalue,
       Dernier_employeur:this.Dernier_employeur,
       cv:this.cv
     });
@@ -53,13 +80,16 @@ export class PostulerComponent implements OnInit {
       email: this.email.value,
       telephone: this.telephone.value,
       niveau_etude: this.Niveau_etude.value,
-      annees_experience: this.annees_experience.value,
+      annees_experience: this.itemvalue,
       Dernier_employeur:this.Dernier_employeur.value,
       cv:this.cv.value
     };
 
     return formData;
   }
+
+
+
 
  
 
@@ -98,5 +128,8 @@ AddCandidature() {
   
 
 
- 
+
+
 }
+
+
