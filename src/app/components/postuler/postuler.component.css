@@ -130,6 +130,7 @@ label{
    padding: 0px 15px;
    outline: none;
   border-radius: 5px;
+  z-index: 1;
   
   }
   @media (max-width:631px){
@@ -226,5 +227,26 @@ cursor: pointer;
 }
 .AnneeExper__input::placeholder{
  color: black;
- 
+
+  }
+
+  .AnneeExper__list{
+    background: rgb(216, 216, 216);
+    padding: 10px 0px;
+    color:black;
+    z-index: 999;
+    cursor: pointer;
+    height: 150px;
+    overflow-y: scroll;
+  
+  }
+  .AnneeExper__list--item{
+    padding: 8px 10px;
+
+    
+      }
+
+  .AnneeExper__list--item:hover{
+background-color: white;
+
   }
