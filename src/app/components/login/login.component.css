@@ -41,7 +41,7 @@ input{
 
 .oc__form-title{
     text-align: center;
-    color: rgb(190, 190, 189);
+    color: rgb(255, 255, 255);
 
 }
 
@@ -106,5 +106,8 @@ cursor: pointer;
     
       }
 
-
+      .User__label,
+      .Password__label{
+        color:white
+      }
      

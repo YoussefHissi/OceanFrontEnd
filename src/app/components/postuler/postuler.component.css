@@ -40,7 +40,7 @@ li{
 .oc__form-title{
   margin-top: 10px;
     text-align: center;
-    color: rgb(190, 190, 189);
+    color: rgb(255, 255, 255);
 
 }
 
@@ -100,6 +100,7 @@ li{
 
 label{
   font-size: 1.4rem;
+  color: white;
 }
 
 
@@ -201,6 +202,10 @@ transition: all 0.5s ease-in;
 color: black;
 
       }
+      input[type="file"]{
+        color: white;
+      }
+
 
       input::content{
         font-size: 1.2rem;
@@ -208,7 +213,7 @@ color: black;
 
               
   .error-message{
-    color: red;
+    color: yellow ;
     padding: 3px;
     font-size: 1.3rem;
 
@@ -251,3 +256,8 @@ cursor: pointer;
 background-color: white;
 
   }
+
+  .star{
+    color: yellow;
+  }
+

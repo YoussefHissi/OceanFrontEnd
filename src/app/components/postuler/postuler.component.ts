@@ -38,9 +38,9 @@ export class PostulerComponent implements OnInit {
     get_item_value(event:any){
       this.itemvalue=event.target.value 
       if(this.itemvalue==1){
-        this.itemvalue=this.itemvalue+' year'
+        this.itemvalue=this.itemvalue
       }if(this.itemvalue==8){
-        this.itemvalue='+ '+this.itemvalue
+        this.itemvalue='+ '+this.itemvalue+" years"
       }
       
       else{

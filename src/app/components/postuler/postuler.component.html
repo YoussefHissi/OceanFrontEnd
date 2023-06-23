@@ -21,7 +21,7 @@
     <form class="oc__form" [formGroup]="postuler" >
         <div class="oc__form-content">
         <div class="oc__input-box">
-          <label class="Nom__label">Nom *</label>
+          <label class="Nom__label">Nom <span class="star">*</span></label>
           <input placeholder="Nom" type="text" formControlName="nom" [class.error]="nom.invalid && (nom.dirty || nom.touched)">
           <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="error-message">
             Nom is required.
@@ -31,7 +31,7 @@
         
         
         <div class="oc__input-box">
-          <label class="Prenom__label">Prenom *</label>
+          <label class="Prenom__label">Prenom <span class="star">*</span></label>
           <input placeholder="Prenom" formControlName="prenom" [class.error]="prenom.invalid && (prenom.dirty || prenom.touched)">
           <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="error-message">
             Prenom is required.
@@ -39,7 +39,7 @@
         </div>
         
         <div class="oc__input-box">
-          <label class="Email__label">Email *</label>
+          <label class="Email__label">Email <span class="star">*</span></label>
           <input placeholder="Email" type="email" formControlName="email" [class.error]="email.invalid && (email.dirty || email.touched)">
           <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
             Please enter a valid email address.
@@ -47,7 +47,7 @@
         </div>
         
         <div class="oc__input-box">
-          <label class="Telephone__label">Telephone *</label>
+          <label class="Telephone__label">Telephone <span class="star">*</span></label>
           <input placeholder="ex: 0658585858" type="text" formControlName="telephone" [class.error]="telephone.invalid && (telephone.dirty || telephone.touched)">
           <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="error-message">
             Telephone is required.
@@ -55,7 +55,7 @@
         </div>
         
         <div class="oc__input-box">
-          <label class="NineauEtu__label">Nineau d'études *</label>
+          <label class="NineauEtu__label">Nineau d'études <span class="star">*</span></label>
           <input placeholder="ex: Licence" type="text" formControlName="Niveau_etude" [class.error]="Niveau_etude.invalid && (Niveau_etude.dirty || Niveau_etude.touched)">
           <div *ngIf="Niveau_etude.invalid && (Niveau_etude.dirty || Niveau_etude.touched)" class="error-message">
             Nineau d'études is required.
@@ -65,7 +65,7 @@
     
        
         <div class="oc__input-box">
-          <label class="DernierEmployeur__label">Dernier employeur *</label>
+          <label class="DernierEmployeur__label">Dernier employeur <span class="star">*</span></label>
           <input type="text" formControlName="Dernier_employeur" [class.error]="Dernier_employeur.invalid && (Dernier_employeur.dirty || Dernier_employeur.touched)">
           <div *ngIf="Dernier_employeur.invalid && (Dernier_employeur.dirty || Dernier_employeur.touched)" class="error-message">
             Dernier employeur is required.
@@ -73,7 +73,7 @@
         </div>
          
         <div class="oc__input-box">
-          <label class="CV__label">Votre CV *</label>
+          <label class="CV__label">Votre CV <span class="star">*</span></label>
           <input formControlName="cv" class="oc__cv-input" type="file" [class.error]="cv.invalid && (cv.dirty || cv.touched)">
           <div *ngIf="cv.invalid && (cv.dirty || cv.touched)" class="error-message">
             Please upload your CV.
@@ -81,12 +81,11 @@
         </div> 
 
         <div class="oc__input-box ">
-          <label class="AnneeExper__label">Nombre d’années d’expérience *</label>
-          <input class="AnneeExper__input"  (click)="showlist()" readonly placeholder="{{itemvalue}}" type="text" formControlName="annees_experience" [class.error]="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)">
+          <label class="AnneeExper__label">Nombre d’années d’expérience <span class="star">*</span> </label>
+          <input class="AnneeExper__input"  (click)="showlist()" readonly value="{{itemvalue}}" placeholder="Select" type="text" formControlName="annees_experience" [class.error]="annees_experience.invalid && (annees_experience.dirty || annees_experience.touched)">
           <svg  width="24" height="24" viewBox="0 0 24 24" focusable="false" class="cqEepf NMm5M icon-down"><path d="M7 10l5 5 5-5H7z"></path></svg>
           <ul *ngIf="showedlist" class="AnneeExper__list">
-            <li class="AnneeExper__list--item"   (click)="get_item_value($event);hidelist()" value="1 year">less than 1 year</li>
-            <li class="AnneeExper__list--item"   (click)="get_item_value($event);hidelist()" value="1 year">1 year</li>
+            <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="1 year">1 year</li>
             <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="2 years">2 years</li>
             <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="3 years">3 years</li>
             <li class="AnneeExper__list--item" (click)="get_item_value($event);hidelist()" value="4 years">4 years</li>
