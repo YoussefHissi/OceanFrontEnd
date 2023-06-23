@@ -45,7 +45,7 @@ li{
 
 
 .oc__postule-section {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 
@@ -56,7 +56,7 @@ li{
     
     width: 90% !important;
     margin: 40px auto;
-    background-color: #cccdd1;
+    background-color: #ffffff;
     border-radius: 5px;
 
     
@@ -136,4 +136,8 @@ color:rgb(255, 255, 255)
     padding: 8px 0px;
     cursor: pointer;
     text-decoration: none;
+}
+
+thead{
+    color:white
 }
