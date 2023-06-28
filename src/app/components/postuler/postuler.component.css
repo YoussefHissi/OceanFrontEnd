@@ -38,7 +38,8 @@ li{
 
 
 .oc__form-title{
-  margin-top: 10px;
+ 
+  margin-top: 50px;
     text-align: center;
     color: rgb(255, 255, 255);
 
@@ -187,6 +188,13 @@ transition: all 0.5s ease-in;
 
       .Candidature_envoyee--h2{
         text-align: center;
+        
+
+      }
+
+      .Candidature_envoyee--h2{
+        padding-top:100px;
+         color:white
       }
 
       #animation{
@@ -261,3 +269,4 @@ background-color: white;
     color: yellow;
   }
 
+ 

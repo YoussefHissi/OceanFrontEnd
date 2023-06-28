@@ -18,8 +18,8 @@ ngOnInit() {
 }
 
   initialiseData() {
-    this.password = new FormControl('123', Validators.required);
-    this.username = new FormControl('Youssef', Validators.required);
+    this.password = new FormControl('', Validators.required);
+    this.username = new FormControl('', Validators.required);
   
     this.Loginform = new FormGroup({
       password: this.password,

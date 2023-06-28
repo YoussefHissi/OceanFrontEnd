@@ -4,13 +4,13 @@
 
 
 
-<section class="oc__header">
+<!-- <section class="oc__header">
     
  <div class="oc__logo-box">
     <img class="oc__logo"  src="https://www.oceaneconsulting.com/wp-content/themes/oceaneconsulting/assets/images/logo-oceane-consulting-bleu-blanc.svg" alt="">
  </div>
 
-</section>
+</section> -->
 
 <section class="oc__postule-section" *ngIf="!submitClicked">
     
@@ -22,7 +22,7 @@
         <div class="oc__form-content">
         <div class="oc__input-box">
           <label class="Nom__label">First Name <span class="star">*</span></label>
-          <input placeholder="Nom" type="text" formControlName="nom" [class.error]="nom.invalid && (nom.dirty || nom.touched)">
+          <input placeholder="First Name" type="text" formControlName="nom" [class.error]="nom.invalid && (nom.dirty || nom.touched)">
           <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="error-message">
             First Name is required.
           </div>
@@ -32,7 +32,7 @@
         
         <div class="oc__input-box">
           <label class="Prenom__label">Last Name <span class="star">*</span></label>
-          <input placeholder="Prenom" formControlName="prenom" [class.error]="prenom.invalid && (prenom.dirty || prenom.touched)">
+          <input placeholder="Last Name" formControlName="prenom" [class.error]="prenom.invalid && (prenom.dirty || prenom.touched)">
           <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="error-message">
             Last Name is required.
           </div>
@@ -113,7 +113,7 @@
 
    <section class="oc__message-section"  *ngIf="submitClicked">
     <h2 class="Candidature_envoyee--h2">Application sent !</h2>
-    <div id="animation"><iframe [frameBorder]="0" src="https://embed.lottiefiles.com/animation/79569"></iframe></div>
+    <div id="animation"><iframe [frameBorder]="0" src="https://embed.lottiefiles.com/animation/68885"></iframe></div>
    </section>
 
 

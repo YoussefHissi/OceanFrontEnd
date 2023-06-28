@@ -1,8 +1,8 @@
 
   <section class="oc__header">
-    <div class="oc__logo-box">
+    <!-- <div class="oc__logo-box">
       <img class="oc__logo" src="https://www.oceaneconsulting.com/wp-content/themes/oceaneconsulting/assets/images/logo-oceane-consulting-bleu-blanc.svg" alt="">
-    </div>
+    </div> -->
   </section>
   <h2 class="oc__form-title">
     Managing Applications !
@@ -18,20 +18,20 @@
       <thead class="thead-tableau ">
         <tr class="overflow-scroll  ">
           <th scope="col  ">Id</th>
-          <th scope="col ">Nom</th>
-          <th scope="col ">Prénom</th>
+          <th scope="col ">First Name</th>
+          <th scope="col ">Last Name</th>
           <th scope="col ">Email</th>
-          <th scope="col ">Téléphone</th>
-          <th scope="col ">Année d'expérience</th>
-          <th scope="col ">Niveau D'étude</th>
-          <th scope="col ">Dernier employeur</th>
-          <th scope="col ">CV</th>
+          <th scope="col ">Phone Number</th>
+          <th scope="col ">number of years of experience</th>
+          <th scope="col ">educational level</th>
+          <th scope="col ">Last employer</th>
+          <th scope="col ">Resume</th>
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let item of candidats | paginate: { itemsPerPage: pageSize, currentPage: currentPage } ; index as i">
-          <td>{{ item.id }}</td>
+          <td>1</td>
           <td>{{ item.nom }}</td>
           <td>{{ item.prenom }}</td>
           <td>{{ item.email }}</td>
